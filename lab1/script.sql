@@ -27,5 +27,6 @@ CREATE TABLE books
   count integer NOT NULL,
   CONSTRAINT "pkBook" PRIMARY KEY (name),
   CONSTRAINT "fkBook" FOREIGN KEY (stillageId)
-      REFERENCES stillage (id)
+      REFERENCES stillage (id),
+  CONSTRAINT "cuISBN" UNIQUE (isbn)
 )
